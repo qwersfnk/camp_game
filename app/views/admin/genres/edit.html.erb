@@ -2,12 +2,12 @@
   <h2>ジャンル編集(管理者)</2>
 </div>
 
+<%= form_with model: Genre.new, url: admin_genres_path,method: :post do |f| %>
 <div class="table table-borderless" style="width:90%;margin-left:10%;margin-top:80px">
   <div class="row">
     <div class="col-6">
       <div class="form-group">
-        <div class="bg-primary">
-          <%= form_with model: Genre.new, url: admin_genres_path,method: :post do |f| %>
+        <div>
           <h2>ジャンル名</h2>
         </div>
         <div>
@@ -15,7 +15,6 @@
         </div>
         <div>
           <%= f.submit '変更を保存', class: "btn btn-success" %>
-          <% end %>
         </div>
       </div>
     </div>
@@ -36,3 +35,4 @@
     </div>
   </div>
 </div>
+<% end %>
