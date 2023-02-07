@@ -1,9 +1,9 @@
-<div style="width:50%;margin-left:40%;margin-top:30px">
+<div style="width:60%;margin-left:10%;margin-top:30px">
   <h1>ログインアプリ</h1>
 </div>
 
 
-<div style="width:50%;margin-left:40%;margin-top:30px">
+<div style="width:60%;margin-left:30%;margin-top:30px">
   <% if user_signed_in? %> <!-- ユーザーがログインしているか調べる -->
     <!-- ユーザーがログインしていた時の処理 -->
 </div>
@@ -20,25 +20,25 @@
   <h2> 現在ログインしていません </h2>
 </div>
 
-<div class="table table-borderless" style="width:80%;margin-left:20%;margin-top:60px">
+<div class="table table-borderless" style="width:80%;margin-left:0%;margin-top:60px">
   <div>
     ログインをしたい場合はログインボタンから宜しくお願い致します。
   </div>
 </div>
-<div class="table table-borderless" style="width:70%;margin-left:38%;margin-top:40px">
+<div class="table table-borderless" style="width:70%;margin-left:20%;margin-top:40px">
   <div>
     <%= link_to "ログイン", new_user_session_path, class: 'post', class: "btn btn-info" %> <!-- ログイン画面に移行する -->
   </div>
 </div>
 
-<div class="table table-borderless" style="width:80%;margin-left:20%;margin-top:60px">
+<div class="table table-borderless" style="width:80%;margin-left:0%;margin-top:60px">
   <div>
     新規登録をしたい場合は新規登録ボタンから宜しくお願い致します。
   </div>
 </div>
-<div class="table table-borderless" style="width:70%;margin-left:38%;margin-top:40px">
+<div class="table table-borderless" style="width:70%;margin-left:20%;margin-top:40px">
   <div>
-    <%= link_to "新規登録", new_user_registration_path, class: 'post' %> <!-- 新規登録画面に移行する -->
+    <%= link_to "新規登録", new_user_registration_path, class: 'post', class: "btn btn-info" %> <!-- 新規登録画面に移行する -->
   </div>
 </div>
 <% end %>
