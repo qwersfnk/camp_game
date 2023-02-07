@@ -1,0 +1,59 @@
+<div style="width:80%;margin-left:20%;margin-top:30px">
+  <h2>いいね(ブックマーク)機能</2>
+</div>
+
+<%= form_with model: @users, url: goods_path do |f| %>
+<table class="table table-bordered" style="width:80%;margin-left:10%;margin-top:50px">
+  <tbody>
+    <tr>
+      <td class="bg-secondary">紹介</td>
+      <td class="bg-secondary">画像</td>
+      <td class="bg-secondary">説明</td>
+      <td width='100' class="bg-secondary">いいね</td>
+      <td width='100' class="bg-secondary">いいね数</td>
+    </tr>
+    <tr>
+      <td>オートキャンプ</td>
+      <td><%= image_tag 'AUTO CAMP', size: "100x100" %></td>
+      <td>オートキャンプとは、一般的に自動車を使ったキャンプのことです。
+      なので、積載量に応じて多くのキャンプに必要な道具を持ち込めるのが魅力です。
+      天候が悪い日などは、自動車に避難して安全に待機できたりするので、キャンプ初心者の方にもオートキャンプは
+      普段から来ていないキャンプ場で避難場所に困ったらすぐに自動車に避難できます。</td>
+      <td>
+        <%= link_to('/favorite/1/good') do %>
+          <div class="btn btn-danger">いいね</div>
+        <% end %>
+      </td>
+      <td><%= @camp_types.first.count %></td>
+    </tr>
+    <tr>
+      <td>ソロキャンプ</td>
+      <td><%= image_tag 'SOLO CAMP', size: "100x100" %></td>
+      <td>ソロキャンプとは、ひとりでキャンプを楽しむことができる自由なキャンプです。
+      自分自身のやりたいことをして自然豊かな場所で楽しむことができます。
+      ソロキャンプ向けで、キャンプ用品とキャンプ場とキャンプ道具を
+      レンタルしているウェブサービスがあります。</td>
+      <td>
+        <%= link_to('/favorite/2/good') do %>
+          <div class="btn btn-danger">いいね</div>
+        <% end %>
+      </td>
+      <td><%= @camp_types.second.count %></td>
+    </tr>
+    <tr>
+      <td>ファミリーキャンプ</td>
+      <td><%= image_tag 'SUMMER CAMP', size: "100x100" %></td>
+      <td>ファミリーキャンプとは、いろんな人たちと一緒にキャンプを楽しむことができます。
+      例えば、「子供をキャンプで遊ばせたい」「家族と一緒にキャンプをしたい」「自然に囲まれて楽しみたい」などが
+      ありとても楽しむことができます。
+      家族又は友達と一緒に行くのも最適です。</td>
+      <td>
+        <%= link_to('/favorite/3/good') do %>
+          <div class="btn btn-danger">いいね</div>
+        <% end %>
+      </td>
+      <td><%= @camp_types.third.count %></td>
+    </tr>
+  </tbody>
+</table>
+<% end %>

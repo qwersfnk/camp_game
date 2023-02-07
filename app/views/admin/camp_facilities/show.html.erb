@@ -1,0 +1,47 @@
+<div style="width:80%;margin-left:20%;margin-top:30px">
+  <h2>キャンプ詳細画面(管理者)</2>
+</div>
+
+<div style="width:70%;margin-left:10%;margin-top:90px">
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group">
+        <div>
+         <%= image_tag @camp_facility.get_image, size: "350x250" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <table class="table table-bordered">
+          <tbody>
+            <tr>
+              <td class="bg-secondary">ジャンル名</td>
+              <td><%= @camp_facility.genre.name %></td>
+            </tr>
+            <tr>
+              <td class="bg-secondary">スポット場所</td>
+              <td><%= @camp_facility.spot %></td>
+            </tr>
+            <tr>
+              <td class="bg-secondary">大事なマナー</td>
+              <td><%= @camp_facility.manners %></td>
+            </tr>
+            <tr>
+              <td class="bg-secondary">キャンプをやるときの注意事項</td>
+              <td><%= @camp_facility.notes%></td>
+            </tr>
+            <tr>
+              <td class="bg-secondary">キャンプで楽しかったこと</td>
+              <td><%= @camp_facility.it_was_fun %></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="width:90%;margin-left:46%;margin-top:30px">
+  <%= link_to '詳細編集', edit_admin_camp_facility_path(@camp_facility), class: "btn btn-success" %>
+</div>

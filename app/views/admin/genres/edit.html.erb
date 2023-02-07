@@ -1,0 +1,38 @@
+<div style="width:80%;margin-left:20%;margin-top:30px">
+  <h2>ジャンル編集(管理者)</2>
+</div>
+
+<div class="table table-borderless" style="width:90%;margin-left:10%;margin-top:80px">
+  <div class="row">
+    <div class="col-6">
+      <div class="form-group">
+        <div class="bg-primary">
+          <%= form_with model: Genre.new, url: admin_genres_path,method: :post do |f| %>
+          <h2>ジャンル名</h2>
+        </div>
+        <div>
+          <%= f.text_field :name %>
+        </div>
+        <div>
+          <%= f.submit '変更を保存', class: "btn btn-success" %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <div>
+          <ol>
+          <div>
+            <h2>ジャンル検索</h2>
+          </div>
+          <li>キャンプ</li>
+          <li>ソロキャンプ</li>
+          <li>ファミリーキャンプ</li>
+          <li>オートキャンプ</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
