@@ -4,10 +4,10 @@
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
 <%= render "users/shared/error_messages", resource: resource %>
-<div style="width:65%;margin-left:10%;margin-top:60px">
+<div style="width:65%;margin-left:20%;margin-top:60px">
   <div class="pl-5">
     <div class="form-group row">
-      <div class="col-sm-5 col-form-label">
+      <div class="col-sm-4 col-form-label">
         <td>名前</td>
       </div>
       <div class="col-sm-6">
@@ -17,7 +17,7 @@
   </div>
   <div class="pl-5">
     <div class="form-group row">
-      <div class="col-sm-5 col-form-label">
+      <div class="col-sm-4 col-form-label">
         <td>フリガナ</td>
       </div>
       <div class="col-sm-6">
@@ -27,7 +27,7 @@
   </div>
   <div class="pl-5">
     <div class="form-group row">
-      <div class="col-sm-5 col-form-label">
+      <div class="col-sm-4 col-form-label">
         <td>年齢</td>
       </div>
       <div class="col-sm-6">
@@ -37,7 +37,7 @@
   </div>
   <div class="pl-5">
     <div class="form-group row">
-      <div class="col-sm-5 col-form-label">
+      <div class="col-sm-4 col-form-label">
         <td>性別</td>
       </div>
       <div class="col-sm-6">
@@ -50,7 +50,7 @@
   </div>
   <div class="pl-5">
     <div class="form-group row">
-      <div class="col-sm-5 col-form-label">
+      <div class="col-sm-4 col-form-label">
         <td>郵便番号</td>
       </div>
       <div class="col-sm-6">
@@ -60,7 +60,7 @@
   </div>
   <div class="pl-5">
     <div class="form-group row">
-      <div class="col-sm-5 col-form-label">
+      <div class="col-sm-4 col-form-label">
         <td>住所</td>
       </div>
       <div class="col-sm-6">
@@ -70,7 +70,7 @@
   </div>
   <div class="pl-5">
     <div class="form-group row">
-      <div class="col-sm-5 col-form-label">
+      <div class="col-sm-4 col-form-label">
         <td>電話番号</td>
       </div>
       <div class="col-sm-6">
@@ -80,7 +80,7 @@
   </div>
   <div class="pl-5">
     <div class="form-group row">
-      <div class="col-sm-5 col-form-label">
+      <div class="col-sm-4 col-form-label">
         <td><%= f.label :メールドレス %></td>
       </div>
       <div class="col-sm-6">
@@ -90,7 +90,7 @@
   </div>
   <div class="pl-5">
     <div class="form-group row">
-      <div class="col-sm-5 col-form-label">
+      <div class="col-sm-4 col-form-label">
         <td><%= f.label :パスワード %>(<%= @minimum_password_length %> 文字以上)</td>
       </div>
       <div class="col-sm-6">
@@ -102,7 +102,7 @@
   </div>
   <div class="pl-5">
     <div class="form-group row">
-      <div class="col-sm-5 col-form-label">
+      <div class="col-sm-4 col-form-label">
         <td><%= f.label :パスワード（確認用） %></td>
       </div>
       <div class="col-sm-6">
@@ -112,7 +112,7 @@
   </div>
 </div>
 
-<div style="width:80%;margin-left:40%;margin-top:30px">
+<div style="width:80%;margin-left:45%;margin-top:30px">
   <%= f.submit "新規登録", class: "btn btn-info" %>
 </div>
 <% end %>

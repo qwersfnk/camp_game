@@ -11,7 +11,7 @@
 <div style="width:50%;margin-left:40%;margin-top:30px">
   <h4> メールアドレス： <%= current_user.email %> </h4>
   <div> <!-- ログアウトをする -->
-    <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+    <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn btn-info" %>
   </div>
 </div>
 <% else %>

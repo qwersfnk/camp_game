@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :admins
+  devise_for :admin
 #   devise_for :users
   #get '/', :to => 'homes#top'
   #root to: 'public/homes#top'
