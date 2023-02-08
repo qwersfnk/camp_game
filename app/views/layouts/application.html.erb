@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -20,24 +19,37 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
-            <!--% if admin_signed_in? %>
-            <!--adminでログインしているときのヘッダー-->
-
-                <%#= link_to admin_camp_facilities_path do %>
-                      キャンプ一覧
-                <%# end %>
-
-                <%#= link_to admin_genres_path do %>
-                      ジャンル一覧
-                <%# end %>
-
-                <%#= link_to _path do %>
-                      ログアウト
-                <%# end %>
+            <% if admin_signed_in? %>
+              <!--adminでログインしているときのヘッダー-->
+                <%= link_to admin_camp_facilities_path do %>
+                  <i class="fas fa-home"></i>キャンプ一覧
+                <% end %>
+                <%= link_to admin_genres_path do %>
+                  <i class="fas fa-home"></i>ジャンル一覧
+                <% end %>
+                <%= link_to destroy_admin_session_path, method: :delete do %>
+                  <i class="fas fa-home"></i>ログアウト
+                <% end %>
 
 
             <!--customerでログインしているときのヘッダー-->
             <%# elsif customer_signed_in? %>
+              <li>
+                <%= link_to about_path do %>
+                  <i class="fas fa-user"></i>about
+                <% end %>
+              </li>
+              <li>
+                <%= link_to users_path do %>
+                  <i class="fas fa-users-slash"></i>会員一覧
+                <% end %>
+              </li>
+              <li>
+                <%= link_to destroy_user_session_path, method: :delete do %>
+                  <i class="fas fa-sign-out"></i>ログアウト
+                <% end %>
+              </li>
+            <% else %>
 
             <!--customerでログアウトしているときのヘッダー-->
             <li>
@@ -49,6 +61,7 @@
             <li>
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
             </li>
+            <% end %>
             </ul>
           </div>
         </div>
