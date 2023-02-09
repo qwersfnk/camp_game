@@ -1,0 +1,30 @@
+<div style="width:50%;margin-left:40%;margin-top:30px">
+  <h2>ユーザープロフィールの投稿一覧</2>
+</div>
+
+<table class="table table-borderless" class="table table-borderless" style="width:70%;margin-left:15%;margin-top:20px">
+  <tbody>
+    <tr class="table-secondary">
+      <td>ユーザーID</td>
+      <td>名前</td>
+      <td>年齢</td>
+      <td>住所</td>
+    </tr>
+    <% @user.each do |user| %>
+    <tr>
+      <td>
+        <%= @user.id %>
+      </td>
+      <td>
+        <%= @user.last_name %> <%= @user.first_name %>
+      </td>
+      <td>
+        <%= @user.age %>
+      </td>
+      <td>
+        <%= @user.address %>
+      </td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>

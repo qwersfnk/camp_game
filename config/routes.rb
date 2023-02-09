@@ -41,6 +41,7 @@ end
     namespace :admin do
         resources :camp_facilities
         resources :genres
+        resources :posts
 #   get 'camp_facilities' => 'camp_facilities#new'
 #   get 'camp_facilities' => 'camp_facilities#show'
 #   get 'camp_facilities' => 'camp_facilities#edit'
