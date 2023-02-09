@@ -33,7 +33,7 @@
 
 
             <!--customerでログインしているときのヘッダー-->
-            <%# elsif customer_signed_in? %>
+            <% elsif user_signed_in? %>
               <li>
                 <%= link_to about_path do %>
                   <i class="fas fa-user"></i>about
