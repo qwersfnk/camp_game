@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
     if resource.is_a?(Admin)
       admin_camp_facilities_path
     else
-      root_path
+      user_path(resource)
     end
   end
 end
