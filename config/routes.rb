@@ -42,6 +42,8 @@ end
         resources :camp_facilities
         resources :genres
         resources :posts
+        delete "posts/:id" => "posts#destroy
+        "
 #   get 'camp_facilities' => 'camp_facilities#new'
 #   get 'camp_facilities' => 'camp_facilities#show'
 #   get 'camp_facilities' => 'camp_facilities#edit'
