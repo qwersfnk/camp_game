@@ -54,16 +54,6 @@
               </li>
             <% else %>
 
-            <!--customerでログアウトしているときのヘッダー-->
-            <li>
-              <%= link_to "about", about_path %>
-            </li>
-            <li>
-              <%= link_to "新規登録(会員)", new_user_registration_path %>
-            </li>
-            <li>
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-            </li>
             <% end %>
             </ul>
           </div>

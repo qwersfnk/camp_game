@@ -1,4 +1,6 @@
 class Admin::CampFacilitiesController < ApplicationController
+  before_action :authenticate_admin!
+
   def edit
     @camp_facility = CampFacility.find(params[:id])
   end
