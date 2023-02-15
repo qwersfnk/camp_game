@@ -10,3 +10,9 @@ Admin.create!(
     email: 'admin@admin',
     password: '3004344',
 )
+
+ 3.times do |n|
+    CampType.create!(
+      count: 0
+    )
+  end

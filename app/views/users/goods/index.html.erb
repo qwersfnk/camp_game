@@ -24,7 +24,10 @@
           <div class="btn btn-warning">いいね</div>
         <% end %>
       </td>
-      <td><%= @camp_types.first.count %></td>
+      <% if @camp_types.first.nil? %>
+      <% else %>
+        <td><%= @camp_types.first.count %></td>
+      <% end %>
     </tr>
     <tr>
       <td>ソロキャンプ</td>
@@ -38,7 +41,10 @@
           <div class="btn btn-warning">いいね</div>
         <% end %>
       </td>
-      <td><%= @camp_types.second.count %></td>
+      <% if @camp_types.second.nil? %>
+      <% else %>
+        <td><%= @camp_types.second.count %></td>
+      <% end %>
     </tr>
     <tr>
       <td>ファミリーキャンプ</td>
@@ -52,7 +58,10 @@
           <div class="btn btn-warning">いいね</div>
         <% end %>
       </td>
-      <td><%= @camp_types.third.count %></td>
+      <% if @camp_types.third.nil? %>
+      <% else %>
+        <td><%= @camp_types.third.count %></td>
+      <% end %>
     </tr>
   </tbody>
 </table>
